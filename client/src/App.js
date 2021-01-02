@@ -41,11 +41,11 @@ export default function App() {
       />
 
       <Switch>
+        <Route path="/movies/:id">
+          <Movie />
+        </Route>
         <Route path="/">
           <MovieList movies={movieList} />
-        </Route>
-        <Route path="/Movies/:id">
-          <Movie />
         </Route>
       </Switch>
     </div>
