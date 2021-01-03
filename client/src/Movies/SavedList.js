@@ -6,7 +6,9 @@ export default function SavedList(props) {
     <div className="saved-list">
       <h3>Saved Movies:</h3>
       {props.list.map((movie) => (
-        <span className="saved-movie">{movie.title}</span>
+        <span className="saved-movie" key={movie.id}>
+          <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
+        </span>
       ))}
       <Link to="/">
         <div className="home-button">Home</div>
